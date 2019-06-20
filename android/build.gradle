@@ -41,12 +41,11 @@ android {
 }
 
 dependencies {
-
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
     implementation "com.android.support:appcompat-v7:${safeExtGet('supportLibVersion', '+')}"
     implementation "com.facebook.react:react-native:${safeExtGet("reactNative", "+")}"
-    implementation "com.google.android.gms:play-services-gcm:+"
+    implementation "com.google.android.gms:play-services-gcm:${safeExtGet("googlePlayServicesVersion", "19.1.0")}"
     implementation 'me.leolin:ShortcutBadger:1.1.8@aar'
-    implementation "com.google.firebase:firebase-messaging:+"
+    implementation "com.google.firebase:firebase-messaging:${safeExtGet("firebaseVersion", "17.3.4")}"
 }
